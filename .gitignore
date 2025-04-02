@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+outlook-agents/
+venv/
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+*.egg-info/
+
+# PyInstaller
+*.spec

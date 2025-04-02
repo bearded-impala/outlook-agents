@@ -1,0 +1,47 @@
+classify_email:
+  description: >
+    Classify the following email into Work/Personal/Promotional:
+    {email}
+    Ignore the placeholder noise of the email and focus only on the core email content
+  agent: email_classifier
+  async_execution: True
+  expected_output: Email Category
+
+summarize_content:
+  description: >
+    Generate a one-liner brutally honest short summary of the below email:
+    {email}
+    Ignore the placeholder noise of the email and focus only on the core email content
+  agent: summarizer
+  async_execution: True
+  expected_output: One sentence summary
+
+detect_urgency:
+  description: >
+    Determine if the following email is Urgent:
+    {email}
+    Ignore the placeholder noise of the email and focus only on the core email content
+  agent: urgency_detector
+  async_execution: True
+  expected_output: Low, Medium, High
+
+analyze_tone:
+  description: >
+    Analyze the tone and underlying meaning of the following email:
+    {email}
+    Ignore the placeholder noise of the email and focus only on the core email content
+  agent: tone_analyzer
+  async_execution: True
+  expected_output: Description of the tone of the email in one sentence
+
+generate_response:
+  description: >
+    Draft a reply to the following email. If the email is a standard application acknowledgment, respond briefly with thanks and interest. Return only the body of the reply email.
+    {email}
+    Ignore the placeholder noise of the email body and focus only on the core email content
+  agent: draft_creator
+  context:
+    - analyze_tone
+    - detect_urgency
+  async_execution: False
+  expected_output: Email Reply draft
