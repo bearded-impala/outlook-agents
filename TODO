@@ -1,7 +1,8 @@
 - Some agents should not run for promotional emails: Sayali
 - A smaller model high performance model is preferrable(gemma3:1b, openchat, mistral, llama3.2, tinyllama, phi, phi3, phi4-mini), only consider options that are available on https://ollama.com/search: Austin
 - Package for Windows using installer.iss file and innosetup tool: Avinesh
-- Create a Proposal for the project: Debdutta
-- temperature field for LLM needs to be tested:
-- Needs work on improving prompts for better performance:
+- Final Report: Debdutta
+- Temperature value for LLMs needs to be experimented with:
+- Improve prompts for better performance:
+
 - Purposely added a break while looping emails in main.py for testing one email at a time. Remove later.
