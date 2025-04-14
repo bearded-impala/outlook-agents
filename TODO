@@ -1,6 +1,7 @@
-- Some agents should not run for promotional emails: Sayali
+- Some agents should not run for promotional emails: Austin
 - Prompt Engineering for better responses: Avinesh
-- Final Report: Austin, Debdutta
+- Final Report: Sayali 
+- Architecture Diagram: Debdutta
 
 - Temperature value for LLMs needs to be experimented with
 - Purposely added a break while looping emails in main.py for testing one email at a time. Remove later.
