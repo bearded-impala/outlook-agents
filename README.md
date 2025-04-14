@@ -37,7 +37,7 @@ This repository provides a lightweight multi-agent orchestration system for Micr
    pip install -r requirements.txt
    ```
 
-3. ** Update `src/config/config.py` **
+3. **Update `src/config/config.py`**
    Update IDENTITY as per your preference
 
 4. **Run the application:**
