@@ -31,7 +31,13 @@ def get_inboxes():
             inbox = root_folder.Folders("Inbox")
             inboxes.append(inbox)
         except Exception as e:
-            print(f"Could not retrieve Inbox for account '{account.DisplayName}': {e}")
+            # If the root folder is not named after the account's display name,
+            # try to find the Inbox folder under the account's DeliveryStore folder.
+            try:
+                inbox = namespace.GetDefaultFolder(6)  # 6 = Inbox
+                inboxes.append(inbox)
+            except Exception as e:
+                print(f"Could not retrieve Inbox for account '{account.DisplayName}': {e}")
     return inboxes
 
 def get_unread_emails():
